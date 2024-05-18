@@ -1,64 +1,97 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>表格_常用属性</title>
+  <meta charset="UTF-8">
+  <title>表格_常用属性</title>
 </head>
+
 <body>
-    <table border="1" width="500" height="500" cellspacing="0">
-        <!-- 表格标题 -->
-        <caption>学生信息</caption>
-        <!-- 表格头部 -->
-        <thead height="50" align="center" valign="middle">
-            <tr>
-                <th width="50" height="50" align="right" valign="bottom">姓名</th>
-                <th>性别</th>
-                <th>年龄</th>
-                <th>民族</th>
-                <th>政治面貌</th>
-            </tr>
-        </thead>
-        <!-- 表格主体 -->
-        <tbody height="520" align="center" valign="middle">
-            <tr height="50" align="center" valign="middle">
-                <td>张三</td>
-                <td>男</td>
-                <td>18</td>
-                <td>汉族</td>
-                <td>团员</td>
-            </tr>
-            <tr>
-                <td>李四</td>
-                <td>女</td>
-                <td>20</td>
-                <td>满族</td>
-                <td>群众</td>
-            </tr>
-            <tr>
-                <td>王五</td>
-                <td>男</td>
-                <td>19</td>
-                <td>回族</td>
-                <td>党员</td>
-            </tr>
-            <tr>
-                <td align="right" valign="top">赵六</td>
-                <td>女</td>
-                <td>21</td>
-                <td>壮族</td>
-                <td>团员</td>
-            </tr>
-        </tbody>
-        <!-- 表格脚注 -->
-        <tfoot height="50" align="center" valign="middle">
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>共计：4人</td>
-            </tr>
-        </tfoot>
-    </table>
+  <!-- 
+    border="1" 表格加1个像素的边框
+    如果border>1,则只能控制表格最外边的边框，控制不了单元格边框
+
+    <table>标签中的 height="500"（高度至少是500） 只改变了 <tbody>标签内部的高度
+
+    cellspacint 单元格 边框之间的间距
+  -->
+  <table border="1" width="500" height="500" cellspacing="0">
+    <!-- 表格标题 -->
+    <!-- caption标签不支持 border，width，height，cellspacing 属性-->
+    <caption>学生信息</caption>
+    <!-- 表格头部 -->
+    <!-- 
+      thead标签支持 height，上述其他属性不支持 
+      align: 水平对齐方式(left, center, right)
+      valign：垂直对齐方式(top, middle, bottom)
+    -->
+    <thead height="50" align="center" valign="middle">
+      <!-- tr(table row) -->
+      <!-- th：表格头部里的单元格 -->
+      <tr>
+        <!--
+          th标签的 width="50"  会影响整列
+          th标签的 height="50" 会影响整行
+        -->
+        <th width="100" height="50" align="right" valign="bottom">姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>民族</th>
+        <th>政治</th>
+      </tr>
+    </thead>
+    <!-- 表格主体 -->
+    <!-- 
+      tbody 跟 thead 的常用属性是一样的
+      tbody 标签中的 height + thead height + tfoot height 的和要大于 table标签中写的height，网页上才能看到tbody的body变化
+     -->
+    <tbody height="520" align="center" valign="middle">
+      <!-- td(table data)：表格主体里的单元格 -->
+      <tr height="50" align="center" valign="middle">
+        <td>张三</td>
+        <td>男</td>
+        <td>18</td>
+        <td>汉族</td>
+        <td>团员</td>
+      </tr>
+      <tr>
+        <td>李四</td>
+        <td>女</td>
+        <td>20</td>
+        <td>满族</td>
+        <td>群众</td>
+      </tr>
+      <tr>
+        <td>王五</td>
+        <td>男</td>
+        <td>19</td>
+        <td>回族</td>
+        <td>党员</td>
+      </tr>
+      <tr>
+        <!-- td标签 的常用属性 与 th标签 相同 -->
+        <td align="right" valign="top">赵六</td>
+        <td>女</td>
+        <td>21</td>
+        <td>壮族</td>
+        <td>团员</td>
+      </tr>
+    </tbody>
+    <!-- 表格脚注 -->
+    <!-- 
+      tfoot 跟 thead 的常用属性是一样的
+     -->
+    <tfoot height="100" align="left" valign="top">
+      <!-- td(table data)：表格脚注里的单元格 -->
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>共计：4人</td>
+      </tr>
+    </tfoot>
+  </table>
 </body>
+
 </html>
