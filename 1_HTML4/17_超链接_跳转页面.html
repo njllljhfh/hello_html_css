@@ -5,12 +5,21 @@
     <title>超链接_跳转页面</title>
 </head>
 <body>
+    <!-- 快捷键：浏览器清空数据，ctrl + shift + delete -->
+    <!-- 
+      target="_self"：在当前页签打开（默认值）
+      target="_blank"：在新页签打开
+    -->
+    <!-- 两个a标签之间的 "回车符" 会被浏览器解析为一个 "空格" -->
     <a href="https://miaosha.jd.com/" target="_self">去秒杀</a>
     <a href="https://www.baidu.com/" target="_blank">去百度</a>
+    <!-- 跳转到项目内部网页 -->
     <a href="./10_HTML排版标签.html">去排版标签</a>
 
+    <!-- a标签是行内元素：可以包裹任何元素，除了它自身 -->
     <a href="./10_HTML排版标签.html">
         <img width="50" src="./奥特曼.jpg" alt="奥特曼">
+        <!-- <a href="./11_HTML语义化标签.html">去排版标签2（不合法，在浏览器检查中会看到空的a标签）</a> -->
     </a>
 </body>
 </html>
