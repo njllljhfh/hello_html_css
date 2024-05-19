@@ -1,48 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>表单_常用控件</title>
+  <meta charset="UTF-8">
+  <title>表单_常用控件</title>
 </head>
+
 <body>
-    <form action="https://search.jd.com/search">
-        <!-- 文本输入框 -->
-        账户：<input type="text" name="account" value="zhangsan" maxlength="10"><br>
-        <!-- 密码输入框 -->
-        密码：<input type="password" name="pwd" value="123" maxlength="6"><br>
-        <!-- 单选框 -->
-        性别：
-        <input type="radio" name="gender" value="male">男 
-        <input type="radio" name="gender" value="female" checked>女<br>
-        <!-- 多选框 -->
-        爱好：
-        <input type="checkbox" name="hobby" value="smoke" checked>抽烟
-        <input type="checkbox" name="hobby" value="drink">喝酒
-        <input type="checkbox" name="hobby" value="perm" checked>烫头<br>
-        其他：
-        <textarea name="other" cols="23" rows="3"></textarea><br>
-        籍贯：
-        <select name="place">
-            <option value="冀">河北</option>
-            <option value="鲁">山东</option>
-            <option value="晋" selected>山西</option>
-            <option value="粤">广东</option>
-        </select>
-        <!-- 隐藏域 -->
-        <input type="hidden" name="from" value="toutiao">
-        <br>
-        <!-- 确认按钮_第一种写法 -->
-        <button type="submit">确认</button>
-        <!-- 确认按钮_第二种写法 -->
-        <!-- <input type="submit" value="确认"> -->
-        <!-- 重置按钮_第一种写法 -->
-        <!-- <button type="reset">重置</button> -->
-        <!-- 重置按钮_第二种写法 -->
-        <input type="reset" value="点我重置">
-        <!-- 普通按钮_第一种写法 -->
-        <input type="button" value="检测账户是否被注册">
-        <!-- 普通按钮_第二种写法 -->
-        <!-- <button type="button">检测账户是否被注册</button> -->
-    </form>
+  <form action="https://search.jd.com/search">
+    <!-- 
+        value: 控制输入框的默认值 
+        maxlength：控制输入的字符长度
+      -->
+    <!-- 文本输入框 -->
+    账户：<input type="text" name="account" value="zhangsan" maxlength="10"><br>
+    <!-- 密码输入框 -->
+    密码：<input type="password" name="pwd" maxlength="6"><br>
+    <!-- 单选框：一定要写name, value -->
+    性别：
+    <input type="radio" name="gender" value="male">男
+    <input type="radio" name="gender" value="female" checked>女<br>
+    <!-- 多选框：一定要写name, value -->
+    爱好：
+    <input type="checkbox" name="hobby" value="smoke" checked>抽烟
+    <input type="checkbox" name="hobby" value="drink">喝酒
+    <input type="checkbox" name="hobby" value="perm" checked>烫头<br>
+    <!-- 
+      文本域 
+      cols：宽，rows：高
+    -->
+    其他：
+    <textarea name="other" cols="23" rows="3"></textarea><br>
+    <!-- 下拉框 -->
+    籍贯：
+    <select name="place">
+      <!-- 如果 option标签没有写value属性，那么 place=option中的文字（如，place=河北） -->
+      <option value="冀">河北</option>
+      <option value="鲁">山东</option>
+      <option value="晋" selected>山西</option>
+      <option value="粤">广东</option>
+    </select>
+    <!-- 隐藏域：会随着表单一起提交 -->
+    <input type="hidden" name="from" value="toutiao">
+    <br>
+    <!-- 确认按钮_第一种写法：不要写 name 属性。button 标签默认的 type 属性就是 type="submit" -->
+    <!-- <button>确认</button> -->
+    <!-- 确认按钮_第二种写法：不要写 name 属性。value 控制按钮显示的文字-->
+    <input type="submit" value="确认">
+    <!-- 重置按钮_第一种写法 -->
+    <!-- <button type="reset">重置</button> -->
+    <!-- 重置按钮_第二种写法 -->
+    <input type="reset" value="点我重置">
+    <!-- 普通按钮（点击按钮表单不会提交）_第一种写法 -->
+    <!-- <button type="button">检测账户是否被注册</button> -->
+    <!-- 普通按钮_第二种写法 -->
+    <input type="button" value="检测账户是否被注册">
+  </form>
 </body>
+
 </html>
