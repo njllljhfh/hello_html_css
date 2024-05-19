@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>HTML全局属性</title>
-    <style>
-        .student {
-            color: red;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>HTML全局属性</title>
+  <style>
+    .student {
+      color: red;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="hello1">你好啊！</div>
-    <div id="hello2">你好啊2！</div>
-    <div class="student">张三</div>
-    <div class="student">李四</div>
-    <div style="color:green">旺财</div>
-    <bdo dir="rtl">你是年少的欢喜</bdo>
-    <div dir="rtl">你是年少的欢喜</div>
-    <div title="英雄联盟">LOL</div>
-    <a href="https://www.baidu.com" title="去百度">去百度</a>
-    <div lang="en">hello</div>
+  <!-- head, html, meta, script, style, title, 这些标签不能写 id 属性-->
+  <div id="hello1">你好啊！</div>
+  <div id="hello2">你好啊2！</div>
+  <div class="student">张三</div>
+  <div class="student">李四</div>
+  <div style="color:green">旺财</div>
+  <!-- div标签中的 dir 表示整行文字是靠左还是靠右，并不会相bdo一样文字反着写 -->
+  <bdo dir="rtl">你是年少的欢喜</bdo>
+  <div dir="rtl">你是年少的欢喜</div>
+  <!-- title 鼠标悬浮提示信息 -->
+  <div title="英雄联盟">LOL</div>
+  <a href="https://www.baidu.com" title="去百度">去百度</a>
+  <div lang="en">hello</div>
 </body>
+
 </html>
