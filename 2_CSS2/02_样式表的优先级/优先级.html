@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>优先级</title>
-    <style>
-        h1{
-            color: red;
-            font-size: 100px;
-        }
-        h1{
-            color: blue;
-            font-size: 40px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>优先级</title>
+  <link rel="stylesheet" href="./index.css">
+  <style>
+    h1 {
+      color: green;
+      font-size: 100px;
+    }
+
+    /* 后写的覆盖先写的 */
+    h1 {
+      color: slateblue;
+      font-size: 40px;
+    }
+  </style>
 </head>
+
 <body>
-    <h1>欢迎来到尚硅谷学习</h1>
+  <!-- 优先级规则：行内样式 > 内部样式 = 外部样式 -->
+  <!-- <h1 style="color: red">欢迎来到尚硅谷学习</h1> -->
+
+  <!-- 内部样式 和 外部样式 的优先级相同，后写的覆盖先写的-->
+  <h1>欢迎来到尚硅谷学习</h1>
 </body>
+
 </html>
