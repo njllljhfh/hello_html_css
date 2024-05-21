@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>08_伪类选择器_动态伪类</title>
-    <style>
-        /* 选中的是没有访问过的a元素 */
-        a:link {
-            color: orange;
-        }
-        /* 选中的是访问过的a元素 */
-        a:visited {
-            color: gray;
-        }
-        /* 选中的是鼠标悬浮状态的a元素 */
-        a:hover {
-            color: skyblue;
-        }
-        /* 选中的是激活状态的a元素 */
-        a:active {
-            color: green;
-        }
-        /* 选中的是鼠标悬浮的span元素 */
-        span:hover {
-            color: green;
-        }
-        /* 选中的是激活的span元素 */
-        span:active {
-            color: red;
-        }
-        /* 选中的是获取焦点状态的input元素、获取焦点状态的select元素 */
-        input:focus,select:focus {
-            color: orange;
-            background-color: green;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>08_伪类选择器_动态伪类</title>
+  <style>
+    /* 
+      link，visited，hover，active 的顺序就按照如下的顺序写（lvha的顺序）。
+      当鼠点击a标签时，a标签有多个状态的，比如对于未被访问的a标签，有 link, hover, active 三个状态，后写的样式会覆盖先写的样式。
+      link 和 visited 是 a标签 独有的状态。
+      hover 和 active 是所有元素都有的状态。
+    */
+    /* 选中的是没有访问过的a元素 */
+    a:link {
+      color: orange;
+    }
+
+    /* 选中的是访问过的a元素 */
+    a:visited {
+      color: gray;
+    }
+
+    /* 选中的是鼠标悬浮状态的a元素 */
+    a:hover {
+      color: skyblue;
+    }
+
+    /* 选中的是激活状态的a元素（激活状态：点下鼠标后，抬起鼠标前） */
+    a:active {
+      color: green;
+    }
+
+    /* -------------------------------------------------------------------- */
+
+    /* 选中的是鼠标悬浮的span元素 */
+    span:hover {
+      color: green;
+    }
+
+    /* 选中的是激活的span元素 */
+    span:active {
+      color: red;
+    }
+
+    /* -------------------------------------------------------------------- */
+
+    /* 
+      选中的是获取焦点状态的input元素、获取焦点状态的select元素
+      focus状态，只有表单类的元素可以使用
+     */
+    input:focus,
+    select:focus {
+      color: orange;
+      background-color: green;
+    }
+  </style>
 </head>
+
 <body>
-    <a href="https://www.baidu.com">去百度</a>
-    <a href="https://www.jd.com">去京东</a>
-    <span>尚硅谷</span>
-    <br>
-    <input type="text">
-    <br>
-    <input type="text">
-    <br>
-    <input type="text">
-    <select>
-        <option value="beijing">北京</option>
-        <option value="shanghai">上海</option>
-    </select>
+  <a href="https://www.baidu.com">去百度</a>
+  <a href="https://www.jd.com">去京东</a>
+  <span>尚硅谷</span>
+  <br>
+  <input type="text">
+  <br>
+  <input type="text">
+  <br>
+  <input type="text">
+  <select>
+    <option value="beijing">北京</option>
+    <option value="shanghai">上海</option>
+  </select>
 </body>
+
 </html>
