@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>02_字体族</title>
-    <style>
-        .atguigu1 {
-            font-size: 100px;
-            font-family: "微软雅黑";
-        }
-        .atguigu2 {
-            font-size: 100px;
-            font-family: "楷体";
-        }
-        .atguigu3 {
-            font-size: 100px;
-            font-family: "宋体";
-        }
-        .atguigu4 {
-            font-size: 100px;
-            font-family: "华文彩云";
-        }
-        .atguigu5 {
-            font-size: 100px;
-            font-family: "翩翩体-简","华文彩云","华文琥珀","微软雅黑";
-        }
-        .atguigu6 {
-            font-size: 100px;
-            font-family: "HanziPen SC","STCaiyun","STHupo","Microsoft YaHei",sans-serif;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>02_字体族</title>
+  <style>
+    /* 默认字体：微软雅黑（非衬线字体） */
+    .atguigu1 {
+      font-size: 100px;
+      font-family: "微软雅黑";
+    }
+
+    .atguigu2 {
+      font-size: 100px;
+      /* 楷体（衬线字体） */
+      font-family: "楷体";
+    }
+
+    .atguigu3 {
+      font-size: 100px;
+      font-family: "宋体";
+    }
+
+    .atguigu4 {
+      font-size: 100px;
+      font-family: "华文彩云";
+    }
+
+    .atguigu5 {
+      font-size: 100px;
+      font-family: "翩翩体-简", "华文彩云", "华文琥珀", "微软雅黑";
+    }
+
+    /* 字体最好用英文名，某些浏览器字体中文名有兼容问题 */
+    .atguigu6 {
+      font-size: 100px;
+      /* 
+        当前面的字体都无法使用：
+          最后的 sans-serif 会让浏览器使用当前电脑可用的 一个 非衬线字体
+          最后的 sans 会让浏览器使用当前电脑可用的 一个 衬线字体
+      */
+      font-family: "HanziPen SC", "STCaiyun", "STHupo", "Microsoft YaHei", sans-serif;
+    }
+
+
+    /* 
+      注意：
+        1. 使用字体的英文名字兼容性会更好，具体的英文名可以自行查询，或在电脑的设置里去寻找。
+        2. 如果字体名包含空格，必须使用引号包裹起来。
+        3. 可以设置多个字体，按照从左到右的顺序逐个查找，找到就用，没有找到就使用后面的，且通常在最后写上 serif （衬线字体）或 sans-serif （非衬线字体）。
+        4. windows 系统中，默认的字体就是微软雅黑。
+    */
+  </style>
 </head>
+
 <body>
-    <div class="atguigu1">尚硅谷1</div>
-    <div class="atguigu2">尚硅谷2</div>
-    <div class="atguigu3">尚硅谷3</div>
-    <div class="atguigu4">尚硅谷4</div>
-    <div class="atguigu5">尚硅谷5</div>
-    <div class="atguigu6">尚硅谷6</div>
+  <div class="atguigu1">尚硅谷1</div>
+  <div class="atguigu2">尚硅谷2</div>
+  <div class="atguigu3">尚硅谷3</div>
+  <div class="atguigu4">尚硅谷4</div>
+  <div class="atguigu5">尚硅谷5</div>
+  <div class="atguigu6">尚硅谷6</div>
 </body>
+
 </html>

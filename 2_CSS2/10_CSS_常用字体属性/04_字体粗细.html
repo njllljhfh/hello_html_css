@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>04_字体粗细</title>
-    <style>
-        div {
-            font-size: 100px;
-        }
-        .atguigu1 {
-            font-weight: lighter;
-        }
-        .atguigu2 {
-            font-weight: normal;
-        }
-        .atguigu3 {
-            font-weight: bold;
-        }
-        .atguigu4 {
-            font-weight: bolder;
-        }
-        .atguigu5 {
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>04_字体粗细</title>
+  <style>
+    /* 
+      属性名： font-weight
+      作用：控制字体的粗细。
+      常用值：
+        关键词
+          1. lighter ：细
+          2. normal ： 正常
+          3. bold ：粗
+          4. bolder ：很粗 （多数字体不支持）
+        数值：
+          1. 100~1000 且无单位，数值越大，字体越粗 （或一样粗，具体得看字体设计时的精确程度）。
+          2. 100~300 等同于 lighter ， 400~500 等同于 normal ， 600 及以上等同于 bold 。
+    */
+    div {
+      font-size: 100px;
+    }
+
+    .atguigu1 {
+      font-weight: lighter;
+    }
+
+    .atguigu2 {
+      font-weight: normal;
+    }
+
+    .atguigu3 {
+      font-weight: bold;
+    }
+
+    .atguigu4 {
+      font-weight: bolder;
+    }
+
+    .atguigu5 {
+      font-weight: 600;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="atguigu1">尚硅谷1</div>
-    <div class="atguigu2">尚硅谷2</div>
-    <div class="atguigu3">尚硅谷3</div>
-    <div class="atguigu4">尚硅谷4</div>
-    <div class="atguigu5">尚硅谷5</div>
+  <div class="atguigu1">尚硅谷1</div>
+  <div class="atguigu2">尚硅谷2</div>
+  <div class="atguigu3">尚硅谷3</div>
+  <div class="atguigu4">尚硅谷4</div>
+  <div class="atguigu5">尚硅谷5</div>
 </body>
+
 </html>
