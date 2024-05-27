@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>06_细说font-size</title>
-    <style>
-        div {
-            font-size: 40px;
-            background-color: skyblue;
-            font-family: "翩翩体-简";
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>06_细说font-size</title>
+  <style>
+    div {
+      font-size: 40px;
+      background-color: skyblue;
+      font-family: "翩翩体-简";
+    }
+
+    /* 
+      了解 "字体设计框"
+      font-size 设置的是 字体设计框 的高度
+      
+      细说 font-size
+        1. 由于字体设计原因，文字最终呈现的大小，并不一定与 font-size 的值一致，可能大，也可能小。
+           例如： font-size 设为 40px ，最终呈现的文字，可能比 40px 大，也可能比 40px小。
+        2. 通常情况下，文字相对字体设计框，并不是垂直居中的，通常都靠下 一些。
+    */
+  </style>
 </head>
+
 <body>
-    <div>atguigux尚硅谷</div>
-    <span style="font-size: 40px; font-family: 微软雅黑;">尚</span>
-    <span style="font-size: 40px; font-family: 隶书;">尚</span>
-    <span style="font-size: 40px; font-family: 翩翩体-简;">尚</span>
+  <div>atguigux尚硅谷</div>
+  <span style="font-size: 40px; font-family: 微软雅黑;">尚</span>
+  <span style="font-size: 40px; font-family: 华文隶书;">尚</span>
+  <span style="font-size: 40px; font-family: 翩翩体-简;">尚</span>
 </body>
+
 </html>

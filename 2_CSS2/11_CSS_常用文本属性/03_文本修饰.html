@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>03_文本修饰</title>
-    <style>
-        div {
-            font-size: 40px;
-        }
-        .atguigu1 {
-            /* 上划的绿色虚线 */
-            text-decoration:overline dotted green;
-        }
-        .atguigu2 {
-            /* 下划的红色波浪线 */
-            text-decoration: underline wavy red;
-        }
-        .atguigu3 {
-            /* 删除线 */
-            text-decoration: line-through;
-        }
-        .atguigu4,ins,del {
-            font-size: 40px;
-            /* 没有各种线 */
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>03_文本修饰</title>
+  <style>
+    div {
+      font-size: 40px;
+    }
+
+    .atguigu1 {
+      /* 上划的绿色虚线 */
+      text-decoration: overline dotted green;
+    }
+
+    .atguigu2 {
+      /* 下划的红色波浪线 */
+      text-decoration: underline wavy red;
+    }
+
+    .atguigu3 {
+      /* 删除线 */
+      text-decoration: line-through;
+    }
+
+    .atguigu4,
+    ins,
+    del {
+      font-size: 40px;
+      /* 没有各种线 */
+      text-decoration: none;
+    }
+
+    /* 
+    文本修饰
+      属性名： text-decoration
+      作用：控制文本的各种装饰线。
+      可选值：
+        1. none ： 无装饰线（常用）
+        2. underline ：下划线（常用）
+        3. overline ： 上划线
+        4. line-through ： 删除线
+      可搭配如下值使用：
+        1. dotted ：虚线
+        2. wavy ：波浪线
+        3. 也可以指定颜色
+    */
+  </style>
 </head>
+
 <body>
-    <div class="atguigu1">尚硅谷1</div>
-    <div class="atguigu2">尚硅谷2</div>
-    <div class="atguigu3">尚硅谷3</div>
-    <a class="atguigu4" href="https://www.baidu.com">尚硅谷4</a>
-    <ins>测试1</ins>
-    <del>测试2</del>
+  <div class="atguigu1">尚硅谷1</div>
+  <div class="atguigu2">尚硅谷2</div>
+  <div class="atguigu3">尚硅谷3</div>
+  <a class="atguigu4" href="https://www.baidu.com">尚硅谷4</a>
+  <ins>测试1</ins>
+  <del>测试2</del>
 </body>
+
 </html>
