@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>09_盒子的边框_border</title>
-    <style>
-        div {
-            width: 400px;
-            height: 400px;
-            background-color: skyblue;
+  <meta charset="UTF-8">
+  <title>09_盒子的边框_border</title>
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: skyblue;
+      /* border: 10px solid red; */
 
-            border-left-width: 10px;
-            border-right-width: 20px;
-            border-top-width: 30px;
-            border-bottom-width: 40px;
+      /* border 的默认宽度是 3px, 默认颜色是黑色 */
+      border-style: solid;
+      border-color: red;
 
-            border-left-color: red;
-            border-right-color: orange;
-            border-top-color: green;
-            border-bottom-color: tomato;
+      border-left-width: 10px;
+      border-right-width: 20px;
+      border-top-width: 30px;
+      border-bottom-width: 40px;
 
-            border-left-style: solid;
-            border-right-style: dashed;
-            border-top-style: double;
-            border-bottom-style: dotted;
+      border-left-color: red;
+      border-right-color: orange;
+      border-top-color: green;
+      border-bottom-color: tomato;
 
-            /* border-color: red; */
-            /* border-width: 80px; */
-            /* border-style: dashed; */
+      border-left-style: solid;
+      border-right-style: dashed;
+      border-top-style: double;
+      border-bottom-style: dotted;
 
-            border-left: 50px solid purple;
-            border-right: 60px dashed orange;
-            border-top: 70px double green;
-            border-bottom: 80px dotted gray;
+      /* border-color: red;
+      border-width: 80px;
+      border-style: dashed; */
 
-            /* border: 10px solid red; */
-        }
-    </style>
+      /* 复合属性 */
+      border-left: 50px solid purple;
+      border-right: 60px dashed orange;
+      border-top: 70px double green;
+      border-bottom: 80px dotted gray;
+
+      /* border: 10px solid red; */
+    }
+  </style>
 </head>
+
 <body>
-    <div>你好啊</div>
+  <div>你好啊</div>
 </body>
+
 </html>

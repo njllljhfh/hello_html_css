@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>07_关于默认宽度</title>
-    <style>
-        div {
-            height: 200px;
-            margin: 50px;
-            border: 5px solid black;
-            padding: 5px;
-            background-color: gray;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>07_关于默认宽度</title>
+  <style>
+    /* 
+      关于默认宽度
+        所谓的默认宽度，就是不设置 width 属性时，元素所呈现出来的宽度。
+        总宽度 = 父的 content — 自身的左右 margin 。
+        内容区的宽度 = 父的 content — 自身的左右 margin — 自身的左右 border — 自身的左右padding 。
+    */
+
+    /* 盒子模型，如果没有设置width，那么设置 margin 会影响盒子的宽度*/
+    div {
+      height: 200px;
+      margin: 50px;
+      border: 5px solid black;
+      padding: 5px;
+      background-color: gray;
+    }
+  </style>
 </head>
+
 <body>
-    <div>你好啊</div>
+  <div>你好啊</div>
 </body>
+
 </html>

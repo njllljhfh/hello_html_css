@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>26_行内块的幽灵空白问题</title>
-    <style>
-        div {
-            width: 600px;
-            background-color: skyblue;
-            /* font-size: 0; */
-        }
-        img {
-            height: 200px;
-            /* vertical-align: bottom; */
-            /* display: block; */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>26_行内块的幽灵空白问题</title>
+  <style>
+    /* 
+      行内块的幽灵空白问题
+
+      产生原因：
+        行内块元素的基线与文本的基线对齐，而文本的基线与文本最底端之间是有一定距离的。
+
+      解决方案：
+        方案一： 给行行内块设置 vertical ，值不为 baseline 即可，设置为 middel 、 bottom 、top 均可。
+        方案二： 若父元素中只有一张图片，设置图片为 display:block 。
+        方案三： 给父元素设置 font-size: 0 。如果该行内块内部还有文本，则需单独设置 font-size 。
+    */
+
+    div {
+      width: 600px;
+      background-color: skyblue;
+      /* 解决方案3：此行，行内块元素后的文字要用其他元素处理 */
+      font-size: 0;
+    }
+
+    img {
+      height: 200px;
+
+      /* 解决方案1 (比较推荐) */
+      /* vertical-align: bottom; */
+
+      /* 解决方案2: 此行后面不能有其他东西，因为会换行 */
+      /* display: block; */
+    }
+
+    /* 解决方案3 */
+    span {
+      font-size: 30px;
+      vertical-align: bottom;
+    }
+  </style>
 </head>
+
 <body>
-    <div>
-        <img src="../images/我的自拍.jpg" alt="悟空">
-    </div>
+  <div>
+    <!-- 默认情况下，图片的下边会跟父元素的基线对齐（即小写字母x的下边） -->
+    <img src="../images/我的自拍.jpg" alt="悟空">
+    <span>xg你好啊</span>
+    xxx
+  </div>
 </body>
+
 </html>

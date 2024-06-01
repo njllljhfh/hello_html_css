@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>23_布局技巧2</title>
-    <style>
-        .outer {
-            width: 400px;
-            height: 400px;
-            background-color: gray;
-            text-align: center;
-            line-height: 400px;
-        }
-        .inner {
-            background-color: orange;
-            font-size: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>23_布局技巧2</title>
+  <style>
+    .outer {
+      width: 400px;
+      height: 400px;
+      background-color: gray;
+      /* 
+        行内元素、行内块元素，可以被父元素当做文本处理。
+        即：可以像处理文本对齐一样，去处理：行内元素、行内块元素在父元素中的对齐。
+        例如： text-align 、 line-height 、 text-indent 等。
+      */
+      text-align: center;
+      line-height: 400px;
+    }
+
+    span {
+      background-color: orange;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="outer">
-        <span class="inner">出来玩啊？</span>
-    </div>
+  <div class="outer">
+    <span>出来玩啊？</span>
+  </div>
 </body>
+
 </html>

@@ -1,37 +1,53 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>25_元素之间的空白问题</title>
-    <style>
-        div {
-            height: 200px;
-            background-color: gray;
-            font-size: 0px;
-        }
-        .s1 {
-            background-color: skyblue;
-        }
-        .s2 {
-            background-color: orange;
-        }
-        .s3 {
-            background-color: green;
-        }
-        span {
-            font-size: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>25_元素之间的空白问题</title>
+  <style>
+    /* 
+      产生的原因：
+        行内元素、行内块元素，彼此之间的换行会被浏览器解析为一个空白字符。
+
+      解决方案：
+        1. 方案一： 去掉换行和空格（不推荐）。
+        2. 方案二： 给父元素设置 font-size:0 ，再给需要显示文字的元素，单独设置字体大小（推荐）。
+    */
+
+    div {
+      height: 200px;
+      background-color: gray;
+      font-size: 0px;
+    }
+
+    .s1 {
+      background-color: skyblue;
+    }
+
+    .s2 {
+      background-color: orange;
+    }
+
+    .s3 {
+      background-color: green;
+    }
+
+    span {
+      font-size: 20px;
+    }
+  </style>
 </head>
+
 <body>
-    <div>
-        <span class="s1">人之初</span>
-        <span class="s2">性本善</span>
-        <span class="s3">性相近</span>
-        <hr>
-        <img src="../images/悟空.jpg" alt="">
-        <img src="../images/悟空.jpg" alt="">
-        <img src="../images/悟空.jpg" alt="">
-    </div>
+  <div>
+    <span class="s1">人之初</span>
+    <span class="s2">性本善</span>
+    <span class="s3">性相近</span>
+    <hr>
+    <img src="../images/悟空.jpg" alt="">
+    <img src="../images/悟空.jpg" alt="">
+    <img src="../images/悟空.jpg" alt="">
+  </div>
 </body>
+
 </html>

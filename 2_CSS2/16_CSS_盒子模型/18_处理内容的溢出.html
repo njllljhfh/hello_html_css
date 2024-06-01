@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>18_处理内容的溢出</title>
-    <style>
-        #d1 {
-            width: 400px;
-            height: 200px;
-            background-color: skyblue;
-            overflow: auto;
-            /* overflow-x: visible; */
-            /* overflow-y: hidden; */
-        }
-        #d2 {
-            width: 1000px;
-            background-color: orange;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>18_处理内容的溢出</title>
+  <style>
+    /* 
+      注意：
+        1. overflow-x 、 overflow-y 不能一个是 hidden ，一个是 visible ，是实验性属性，不建议使用。
+        2. overflow 常用的值是 hidden 和 auto ，除了能处理溢出的显示方式，还可以解决很多疑难杂症。
+    */
+    #d1 {
+      width: 400px;
+      height: 200px;
+      background-color: skyblue;
+      /* overflow: visible; */
+      /* overflow: hidden; */
+      /* overflow: scroll; */
+      overflow: auto;
+
+      /* 不建议使用下面这两个 */
+      /* overflow-x: visible; */
+      /* overflow-y: hidden; */
+    }
+
+    #d2 {
+      width: 1000px;
+      background-color: orange;
+    }
+  </style>
 </head>
+
 <body>
-    <div id="d1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium veritatis reiciendis id
-        molestiae magnam aspernatur esse blanditiis est. Maiores reprehenderit porro dignissimos, perspiciatis suscipit
-        <div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur alias provident quia, reiciendis incidunt rerum, perspiciatis quam nobis omnis quae maxime in esse architecto doloremque numquam tenetur eum quasi velit excepturi ut id inventore. Consequuntur, ad iure velit maiores obcaecati voluptatibus expedita molestiae natus sit mollitia veritatis vero aliquid adipisci?</div>
-        ullam perferendis nam inventore sapiente earum voluptatem dolores ut quae fuga. Itaque delectus cum et illum
-        enim dicta similique nemo pariatur, recusandae molestias. Repellendus ratione recusandae minima ea quis eligendi
-        quae amet. Animi, nulla. Perferendis libero nihil eligendi ea! Accusantium molestias numquam reprehenderit
-        quibusdam delectus, repellat impedit ratione. Iste nam autem vero magni facilis at ex ullam, officiis, corrupti
-        voluptate tempora. Quibusdam, aperiam eveniet illo quidem excepturi, neque, repellat totam beatae in quas
-        provident natus!
-    </div>
+  <div id="d1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo accusantium veritatis reiciendis id
+    molestiae magnam aspernatur esse blanditiis est. Maiores reprehenderit porro dignissimos, perspiciatis suscipit
+    <div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur alias provident quia, reiciendis
+      incidunt rerum, perspiciatis quam nobis omnis quae maxime in esse architecto doloremque numquam tenetur eum quasi
+      velit excepturi ut id inventore. Consequuntur, ad iure velit maiores obcaecati voluptatibus expedita molestiae
+      natus sit mollitia veritatis vero aliquid adipisci?</div>
+    ullam perferendis nam inventore sapiente earum voluptatem dolores ut quae fuga. Itaque delectus cum et illum
+    enim dicta similique nemo pariatur, recusandae molestias. Repellendus ratione recusandae minima ea quis eligendi
+    quae amet. Animi, nulla. Perferendis libero nihil eligendi ea! Accusantium molestias numquam reprehenderit
+    quibusdam delectus, repellat impedit ratione. Iste nam autem vero magni facilis at ex ullam, officiis, corrupti
+    voluptate tempora. Quibusdam, aperiam eveniet illo quidem excepturi, neque, repellat totam beatae in quas
+    provident natus!
+  </div>
 </body>
 
 </html>
