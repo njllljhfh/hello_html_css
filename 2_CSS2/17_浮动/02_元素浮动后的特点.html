@@ -1,44 +1,60 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>02_元素浮动后的特点</title>
-    <style>
-        .outer {
-            width: 800px;
-            height: 400px;
-            padding: 10px;
-            background-color: gray;
-            text-align: center;
-        }
-        .box {
-            font-size: 20px;
-            padding: 10px;
-        }
-        .box1 {
-            background-color: skyblue;
-        }
-        .box2 {
-            background-color: orange;
-            float: left;
-            /* width: 200px; */
-            /* height: 200px; */
-            /* margin-left: 20px; */
-            /* margin-right: 20px; */
-            /* margin-top: 20px; */
-            /* margin-bottom: 20px; */
-        }
-        .box3 {
-            background-color: green;
-            float: left;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>02_元素浮动后的特点</title>
+  <style>
+    /* 
+      元素浮动后的特点
+        1. 🤢脱离文档流。
+        2. 😊不管浮动前是什么元素，浮动后：默认宽与高都是被内容撑开（尽可能小），而且可以设置宽高。
+        3. 😊不会独占一行，可以与其他元素共用一行。
+        4. 😊不会 margin 合并，也不会 margin 塌陷，能够完美的设置四个方向的 margin 和 padding 。
+        5. 😊不会像行内块一样被当做文本处理（没有行内块的空白问题）。
+    */
+
+    .outer {
+      width: 800px;
+      height: 400px;
+      padding: 10px;
+      background-color: gray;
+      text-align: center;
+    }
+
+    .box {
+      font-size: 20px;
+      padding: 10px;
+    }
+
+    .box1 {
+      background-color: skyblue;
+    }
+
+    .box2 {
+      background-color: orange;
+      float: left;
+      /* width: 200px; */
+      /* height: 200px; */
+      /* margin-left: 20px; */
+      /* margin-right: 20px; */
+      /* margin-top: 20px; */
+      /* margin-bottom: 20px; */
+    }
+
+    .box3 {
+      background-color: green;
+      float: left;
+    }
+  </style>
 </head>
+
 <body>
-    <div class="outer">
-        <div class="box box1">盒子1</div>
-        <div class="box box2">盒子2</div>
-        <div class="box box3">盒子3</div>
-    </div>
+  <div class="outer">
+    <div class="box box1">盒子1</div>
+    <div class="box box2">盒子2</div>
+    <div class="box box3">盒子3</div>
+  </div>
 </body>
+
 </html>
